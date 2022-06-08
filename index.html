@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gam prog ads v2</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.2/dist/tailwind.min.css"
+    />
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/21664538223/on/on_maxparad",
+            [
+              [980, 400],
+              [1920, 1080],
+              [980, 552],
+            ],
+            "on/on_maxparad"
+          )
+          .addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/21664538223/on/on_parad",
+            [
+              [980, 120],
+              [980, 400],
+            ],
+            "on/on_parad"
+          )
+          .addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+  </head>
+  <body class="flex justify-center">
+    <div class="p-8 max-w-[1020px]">
+      <!-- /21664538223/on/on_maxparad -->
+      <div
+        class="mb-8"
+        id="on/on_maxparad"
+        style="min-width: 980px; min-height: 400px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_maxparad");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_parad -->
+      <div
+        class="mb-8"
+        id="on/on_parad"
+        style="min-width: 980px; min-height: 120px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_parad");
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
