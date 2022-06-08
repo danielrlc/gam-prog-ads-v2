@@ -14,38 +14,32 @@
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
     ></script>
     <script>
+      const adSlots = [
+        {
+          id: "on/on_maxparad",
+          sizes: [
+            [980, 400],
+            [1920, 1080],
+            [980, 552],
+          ],
+        },
+        {
+          id: "on/on_parad",
+          sizes: [
+            [980, 120],
+            [980, 400],
+          ],
+        },
+      ];
       window.googletag = window.googletag || { cmd: [] };
-      googletag.cmd.push(function () {
-        googletag
-          .defineSlot(
-            "/21664538223/on/on_maxparad",
-            [
-              [980, 400],
-              [1920, 1080],
-              [980, 552],
-            ],
-            "on/on_maxparad"
-          )
-          .addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-    <script>
-      window.googletag = window.googletag || { cmd: [] };
-      googletag.cmd.push(function () {
-        googletag
-          .defineSlot(
-            "/21664538223/on/on_parad",
-            [
-              [980, 120],
-              [980, 400],
-            ],
-            "on/on_parad"
-          )
-          .addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
+      adSlots.map(({ id, sizes }) => {
+        googletag.cmd.push(function () {
+          googletag
+            .defineSlot("/21664538223/" + id, sizes, id)
+            .addService(googletag.pubads());
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+        });
       });
     </script>
   </head>
