@@ -30,6 +30,18 @@
             [980, 400],
           ],
         },
+        {
+          id: "on/on_digihel",
+          sizes: [
+            [620, 891]
+          ],
+        },
+        {
+          id: "on/on_jattebox",
+          sizes: [
+            [468, 400],
+          ],
+        },
       ];
       window.googletag = window.googletag || { cmd: [] };
       adSlots.map(({ id, sizes }) => {
@@ -44,7 +56,7 @@
     </script>
   </head>
   <body class="flex justify-center">
-    <div class="p-8 max-w-[1020px]">
+    <div class="p-8 max-w-[1020px] mb-96">
       <!-- /21664538223/on/on_maxparad -->
       <div
         class="mb-8"
@@ -67,6 +79,32 @@
         <script>
           googletag.cmd.push(function () {
             googletag.display("on/on_parad");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_digihel -->
+      <div
+        class="mb-8"
+        id="on/on_digihel"
+        style="min-width: 620px; min-height: 891px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_digihel");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_jattebox -->
+      <div
+        class="mb-8"
+        id="on/on_jattebox"
+        style="min-width: 468px; min-height: 400px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_jattebox");
           });
         </script>
       </div>
