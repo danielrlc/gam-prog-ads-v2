@@ -9,6 +9,44 @@
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@2.2.2/dist/tailwind.min.css"
     />
+    <script>
+      window.onload = function () {
+        const mainContainer = document.querySelector(".js-main-container");
+        const createAd = (
+          paper,
+          adSlotId,
+          parentContainer,
+          minWidth,
+          minHeight
+        ) => {
+          fullId = `${paper}/${adSlotId}`;
+          e = document.createElement("div");
+          e.id = fullId;
+          e.className = "mb-8";
+          e.style.minWidth = minWidth;
+          e.style.minHeight = minHeight;
+
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          var code = `
+            googletag.cmd.push(function () {
+              googletag.display("on/on_maxparad");
+            });
+          `;
+          try {
+            s.appendChild(document.createTextNode(code));
+            document.body.appendChild(s);
+          } catch (e) {
+            s.text = code;
+            document.body.appendChild(s);
+          }
+
+          parentContainer.appendChild(e);
+        };
+
+        createAd("on", "on_maxparad", mainContainer, 980, 400);
+      };
+    </script>
     <script
       async
       src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
@@ -23,13 +61,21 @@
             [980, 552],
           ],
         },
-        {
-          id: "on/on_parad",
-          sizes: [
-            [980, 120],
-            [980, 400],
-          ],
-        },
+        // {
+        //   id: "on/on_parad",
+        //   sizes: [
+        //     [980, 120],
+        //     [980, 400],
+        //   ],
+        // },
+        // {
+        //   id: "on/on_digihel",
+        //   sizes: [[620, 891]],
+        // },
+        // {
+        //   id: "on/on_jattebox",
+        //   sizes: [[468, 400]],
+        // },
       ];
       window.googletag = window.googletag || { cmd: [] };
       adSlots.map(({ id, sizes }) => {
@@ -43,33 +89,8 @@
       });
     </script>
   </head>
-  <body class="flex justify-center">
-    <div class="p-8 max-w-[1020px]">
-      <!-- /21664538223/on/on_maxparad -->
-      <div
-        class="mb-8"
-        id="on/on_maxparad"
-        style="min-width: 980px; min-height: 400px"
-      >
-        <script>
-          googletag.cmd.push(function () {
-            googletag.display("on/on_maxparad");
-          });
-        </script>
-      </div>
-
-      <!-- /21664538223/on/on_parad -->
-      <div
-        class="mb-8"
-        id="on/on_parad"
-        style="min-width: 980px; min-height: 120px"
-      >
-        <script>
-          googletag.cmd.push(function () {
-            googletag.display("on/on_parad");
-          });
-        </script>
-      </div>
+  <body class="flex justify-center mb-96">
+    <div class="js-main-container p-8 max-w-[1020px]">
     </div>
   </body>
 </html>
