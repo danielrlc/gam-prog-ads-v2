@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gam prog ads v2</title>
+    <title>Testing KSF programmatic ads</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@2.2.2/dist/tailwind.min.css"
@@ -18,9 +18,11 @@
         {
           id: "on/on_maxparad",
           sizes: [
+            [980, 120],
             [980, 400],
-            [1920, 1080],
+            [980, 480],
             [980, 552],
+            [1920, 1080],
           ],
         },
         {
@@ -28,18 +30,140 @@
           sizes: [
             [980, 120],
             [980, 400],
+            [980, 552],
           ],
         },
         {
           id: "on/on_digihel",
           sizes: [
-            [620, 891]
+            [620, 891],
+            [620, 991],
           ],
         },
         {
           id: "on/on_jattebox",
+          sizes: [[468, 400]],
+        },
+        {
+          id: "on/on_box1",
           sizes: [
-            [468, 400],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_box2",
+          sizes: [
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_box3",
+          sizes: [
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_box4",
+          sizes: [
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_box5",
+          sizes: [
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobparad",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobmitt",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_digihelmob",
+          sizes: [
+            [300, 341],
+            [300, 431],
+          ],
+        },
+        {
+          id: "on/on_mobbox1",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobbox2",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobbox3",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobbox4",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
+          ],
+        },
+        {
+          id: "on/on_mobbox5",
+          sizes: [
+            [300, 100],
+            [300, 250],
+            [300, 300],
+            [300, 431],
+            [300, 600],
           ],
         },
       ];
@@ -55,13 +179,37 @@
       });
     </script>
   </head>
-  <body class="flex justify-center">
-    <div class="p-8 max-w-[1020px] mb-96">
+  <body class="flex justify-center text-lg">
+    <div class="p-8 mb-96">
+      <div class="mb-16" style="max-width: 600px">
+        <h1 class="mb-6 text-3xl font-bold">Testing KSF programmatic ads</h1>
+
+        <p class="mb-4">(Ad slots = ad units in Google Ad Manager)</p>
+
+        <p class="mb-4">
+          This page lists all the ad slots we need, for both desktop and mobile.
+          It is currently showing placeholder ads
+          <a
+            href="https://admanager.google.com/21664538223#delivery/order/order_overview/order_id=3034671014"
+            class="underline text-blue-700"
+            >from this order</a
+          >, which are using the
+          <a
+            href="https://admanager.google.com/21664538223#inventory/ad_unit/list/filter=eJxdjUELwjAMRv9Lzr3YocPdxlAoyFQmgsgYxUUsjlbSVJDR_74K7uLtew9eMsLdDIxUOdsbNs56KK4jPPEDBRw0oWXVgwD3QtLsKFnVJH7rIWACKfNlnq3kIltDFHPYsObg_7OurC_dfjvXO-M5PYOyOqnzJllV_2YbWwEeNd0ex4D0vQhxAkI9NWU."
+            class="underline text-blue-700"
+          >
+            child ad units recently created here</a
+          >.
+        </p>
+
+        <p class="mb-4">We are currently testing ad slots for just Östnyland (ON/on), which are all grouped under a parent ad slot called "Östnyland", with the code "on_". The plan is to create similar parent ad slots for the HBL and Vastranyland (VN) sites under their own parent ad slots.</p>
+      </div>
+
       <!-- /21664538223/on/on_maxparad -->
       <div
         class="mb-8"
         id="on/on_maxparad"
-        style="min-width: 980px; min-height: 400px"
+        style="min-width: 980px; min-height: 120px"
       >
         <script>
           googletag.cmd.push(function () {
@@ -105,6 +253,175 @@
         <script>
           googletag.cmd.push(function () {
             googletag.display("on/on_jattebox");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_box1 -->
+      <div
+        class="mb-8"
+        id="on/on_box1"
+        style="min-width: 300px; min-height: 250px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_box1");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_box2 -->
+      <div
+        class="mb-8"
+        id="on/on_box2"
+        style="min-width: 300px; min-height: 250px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_box2");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_box3 -->
+      <div
+        class="mb-8"
+        id="on/on_box3"
+        style="min-width: 300px; min-height: 250px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_box3");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_box4 -->
+      <div
+        class="mb-8"
+        id="on/on_box4"
+        style="min-width: 300px; min-height: 250px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_box4");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_box5 -->
+      <div
+        class="mb-8"
+        id="on/on_box5"
+        style="min-width: 300px; min-height: 250px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_box5");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobparad -->
+      <div
+        class="mb-8"
+        id="on/on_mobparad"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobparad");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobmitt -->
+      <div
+        class="mb-8"
+        id="on/on_mobmitt"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobmitt");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_digihelmob -->
+      <div
+        class="mb-8"
+        id="on/on_digihelmob"
+        style="min-width: 300px; min-height: 341px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_digihelmob");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobbox1 -->
+      <div
+        class="mb-8"
+        id="on/on_mobbox1"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobbox1");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobbox2 -->
+      <div
+        class="mb-8"
+        id="on/on_mobbox2"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobbox2");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobbox3 -->
+      <div
+        class="mb-8"
+        id="on/on_mobbox3"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobbox3");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobbox4 -->
+      <div
+        class="mb-8"
+        id="on/on_mobbox4"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobbox4");
+          });
+        </script>
+      </div>
+
+      <!-- /21664538223/on/on_mobbox5 -->
+      <div
+        class="mb-8"
+        id="on/on_mobbox5"
+        style="min-width: 300px; min-height: 100px"
+      >
+        <script>
+          googletag.cmd.push(function () {
+            googletag.display("on/on_mobbox5");
           });
         </script>
       </div>
